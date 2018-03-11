@@ -1,6 +1,6 @@
 # TriviaGame
 
-Check it out here: 
+Check it out here: https://lhuynh1.github.io/TriviaGame/
 
 * This is a trivia form with multiple choice or true/false options (your choice).
 
