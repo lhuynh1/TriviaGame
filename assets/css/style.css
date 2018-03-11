@@ -1,0 +1,31 @@
+body {
+    background-image: url('../images/football-field.jpeg');
+    font-family: 'Changa', sans-serif;
+}
+
+h1{
+    font-size: 60pt;
+}
+
+.game-pg {
+    background-color: rgba(255, 255, 255, 0.815);
+    position: relative;
+    height: 600px;
+    border: 5px #0f283d solid;
+    border-radius: 25px;
+    margin: 50px auto;
+    text-align: center;
+    box-shadow: 3px 3px 20px 6px rgb(255, 254, 254) !important;
+    padding-bottom: 20px;
+}
+
+#start {
+    background-color: #0f283d;
+    color: white;
+    vertical-align: middle;
+    height: 90px;
+    width: 220px;
+    /* the transform property allows you to rotate, scale, move, skew, etc., elements!! */
+    transform: translate(0, 40%);
+    font-size: 55px !important;
+}
