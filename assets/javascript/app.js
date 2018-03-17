@@ -1,21 +1,5 @@
 $(document).ready(function(){
 
-// 
-
-
-// create object storing each questions with answer choices in an array and the correct answer & gif
-// questions
-// 1. Who is the only athlete to ever play in a Super Bowl and a World Series? A: Deion Sanders
-// 2. Which NFL quarterback has been to the most Super Bowls? A: Tom Brady
-// 3. In what year did the Houston Texans become a team in the US National Football League? A: 2002
-// 4. How many teams are there in the American National Football League? A: 32, 23, 16, 52
-// 5. Who has the most wins as a head coach in the NFL? A: Don Shula
-// 6. Who is the last non-quarterback to win NFL MVP? A: Adrian Peterson
-// 7. Who is the last non-quarterback to win NFL MVP? A: Raiders
-// 8. Who was the first player drafted in the first NFL draft in 1936? A: Jay Berwanger
-// 9. What team was originally named the New York Titans? A: New York Jets
-// 10. Which NFL team features a helmet logo on only one side of their helmet? A: Pittsburgh Steelers
-
 
 // load window with hiding the #gameContent & #gameResults div
 $('#gameContent').hide();
@@ -29,7 +13,8 @@ $('#start').on("click", function(){
     $('#start').hide();
     $('#gameContent').show();
 
-    $('.gif-img').append('<img src="../images/fail.gif">');
+    // :( can't get my gif images to append!!! 
+    // $('.gif-img').append('<img src="../images/fail.gif">');
 
     // calling start timer function when the start button in clicked
     startTimer();
@@ -38,6 +23,12 @@ $('#start').on("click", function(){
     
 });
 
+// on click function for done button will run the gamecheck function && show the results
+$('#done').on("click", function(){
+    gameCheck();
+    $('#gameContent').hide();
+    $('#gameResults').show();
+});
 
 
 // global variables
@@ -190,20 +181,19 @@ var gameCheck = function timesUp(){
         incorrectCounter++;
     }
 
-    // $('#done').on("click", function(){
-    // update game results content with user's answers
+   
     $('#correctCount').html(correctCounter);
     $('#incorrectCount').html(incorrectCounter);
-    $('unasweredCount').html(unansweredCounter);
+    $('#unansweredCount').html(unansweredCounter);
 
     $('gameResults').show();
-    // });
+
+    console.log(correctCounter);
+    console.log(incorrectCounter);
+    console.log(unansweredCounter);
 }
 
 
-// function to display each question
-
-// end-game area displaying results: correct, incorrect & unanswered
 
 
 
