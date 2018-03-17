@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=Changa" rel="stylesheet">
     <!-- Style Sheet -->
      <link rel="stylesheet" href="assets/css/style.css">
-    <title>Trivia Game</title>
+    <title>NFL Trivia Game</title>
 </head>
 
 <body>
@@ -21,19 +21,114 @@
     <div class="container-fluid">
         <div class="row text-center">
             <div class="col-md-8 col-md-offset-2 col-xs-12">
-                <div class="game-pg">
-                    <h1><b>NFL Trivia!</b></h1>
-                    <br>
-                    <img src="assets/images/cowboys.gif">
 
-                    <div class="row">
+                <div class="game-pg col-xs-12">
+                    <h1><b>NFL Trivia!</b></h1>
+                   
+                    <img id="nfl-gif" src="assets/images/cowboys.gif">
+
+                    <div class="gif-img row col-xs-12">
+                        <br><br>
                         <!-- start button -->
                         <button class="btn primary-btn" id="start">Start</button>
                     </div>
-                </div>
-                </div>
+
+                    <br>
+
+                    <div class="row col-xs-12" id="gameContent">
+                    <h2 class="row text-center col-xs-12" id="timerTitle">Time left:<span id="timerCounter"> 90 Seconds</span></h2>
+                        <br><br><br><br>
+                    <div class="row" id="gameQuestions">
+            
+                        <h3>1. Who is the only athlete to ever play in a Super Bowl and a World Series?</h3>
+                        <!-- Deion Sanders  --> 
+                        <input type="radio" value="Deion Sanders" name="q1"> Deion Sanders
+                        <input type="radio" value="Deion Sanders" name="q1"> Russell Wilson
+                        <input type="radio" value="Deion Sanders" name="q1"> Julio Jones
+                        <input type="radio" value="Deion Sanders" name="q1"> Cam Newton
+
+                        <h3>2. Which NFL quarterback has been to the most Super Bowls?</h3>
+                        <!-- Tom Brady  -->
+                        <input type="radio" value="Deion Sanders" name="q2"> Peyton Manning
+                        <input type="radio" value="Deion Sanders" name="q2"> Drew Brees
+                        <input type="radio" value="Deion Sanders" name="q2"> Tom Brady
+                        <input type="radio" value="Deion Sanders" name="q2"> Aaron Rodgers
+
+                        <h3>3. In what year did the Houston Texans become a team in the US National Football League?</h3>
+                        <!-- 2002 -->
+                        <input type="radio" value="Deion Sanders" name="q3"> 2010
+                        <input type="radio" value="Deion Sanders" name="q3"> 2000
+                        <input type="radio" value="Deion Sanders" name="q3"> 2002
+                        <input type="radio" value="Deion Sanders" name="q3"> 2003
+
+                        <h3>4. How many teams are there in the American National Football League?</h3>
+                        <!-- 32 -->
+                        <input type="radio" value="Deion Sanders" name="q4"> 16
+                        <input type="radio" value="Deion Sanders" name="q4"> 32
+                        <input type="radio" value="Deion Sanders" name="q4"> 23
+                        <input type="radio" value="Deion Sanders" name="q4"> 26
+
+                        <h3>5. Who has the most wins as a head coach in the NFL?</h3>
+                        <!-- Don Shula -->
+                        <input type="radio" value="Deion Sanders" name="q5"> Dan Quinn
+                        <input type="radio" value="Deion Sanders" name="q5"> Bill Belichick
+                        <input type="radio" value="Deion Sanders" name="q5"> Andy Reid
+                        <input type="radio" value="Deion Sanders" name="q5"> Don Shula
+
+                        <h3>6. Who is the last non-quarterback to win NFL MVP?</h3>
+                        <!-- Adrian Peterson -->
+                        <input type="radio" value="Deion Sanders" name="q6"> Adrian Peterson
+                        <input type="radio" value="Deion Sanders" name="q6"> Eli Manning
+                        <input type="radio" value="Deion Sanders" name="q6"> Rob Gronkowski
+                        <input type="radio" value="Deion Sanders" name="q6"> J.J Watt
+
+                        <h3>7. How many years must a player be retired to be eligible for the Pro Football Hall of Fame?</h3>
+                        <!-- 5 -->
+                        <input type="radio" value="Deion Sanders" name="q7"> 3
+                        <input type="radio" value="Deion Sanders" name="q7"> 10
+                        <input type="radio" value="Deion Sanders" name="q7"> 5
+                        <input type="radio" value="Deion Sanders" name="q7"> 8
+
+                        <h3>8. Who was the first player drafted in the first NFL draft in 1936?</h3>
+                        <!-- Jay Berwanger -->
+                        <input type="radio" value="Deion Sanders" name="q8"> Joe Montana
+                        <input type="radio" value="Deion Sanders" name="q8"> Jay Berwanger
+                        <input type="radio" value="Deion Sanders" name="q8"> Bill Hewitt
+                        <input type="radio" value="Deion Sanders" name="q8"> Wayne Millner
+
+                        <h3>9. What team was originally named the New York Titans?</h3>
+                        <!-- New York Jets -->
+                        <input type="radio" value="Deion Sanders" name="q9"> Tennessee Titans
+                        <input type="radio" value="Deion Sanders" name="q9"> New Orlean Saints
+                        <input type="radio" value="Deion Sanders" name="q9"> New York Jets
+                        <input type="radio" value="Deion Sanders" name="q9"> Chicago Bears
+
+                        <h3>10. Which NFL team features a helmet logo on only one side of their helmet?</h3>
+                        <!-- Pittsburgh Steelers -->
+                        <input type="radio" value="Deion Sanders" name="q10"> San Francisco 49ers
+                        <input type="radio" value="Deion Sanders" name="q10"> Atlanta Falcons
+                        <input type="radio" value="Deion Sanders" name="q10"> New England Patriots
+                        <input type="radio" value="Deion Sanders" name="q10"> Pittsburgh Steelers
+                        
+                        <br><br><br>
+
+                        <button class="btn primary-btn" id="done">Done</button>
+                    </div>
+                    </div>
+
+                    <div class="row col-xs-12" id="gameResults">
+                        <!-- results -->
+                        <h3>Correct: <span id ="correctCount">0</span></h3>
+                        <h3>Incorrect: <span id ="incorrectCount">0</span></h3>
+                        <h3>Unanswered: <span id ="unansweredCount">0</span></h3>
+                    </div>
+
+                </div> <!-- closing tag for game-pg -->
         </div>
     </div>
     
+    <!-- jQuery Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="assets/javascript/app.js"></script>
 </body>
 </html>
