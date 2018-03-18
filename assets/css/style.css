@@ -46,3 +46,12 @@ h1{
     font-size: 55px !important;
 }
 
+#replay {
+    background-color: #0f283d;
+    color: white;
+    vertical-align: middle;
+    height: 90px;
+    width: 220px;
+    font-size: 55px !important;
+}
+

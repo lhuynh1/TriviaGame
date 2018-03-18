@@ -16,11 +16,9 @@ $('#start').on("click", function(){
     // :( can't get my gif images to append!!! 
     // $('.gif-img').append('<img src="../images/fail.gif">');
 
-    // calling start timer function when the start button in clicked
+    // calling start timer function when the start button is clicked
     startTimer();
-    return;
-   
-    
+    return; 
 });
 
 // on click function for done button will run the gamecheck function && show the results
@@ -30,9 +28,14 @@ $('#done').on("click", function(){
     $('#gameResults').show();
 });
 
+// setting the reload windows method to my replay button
+$('#replay').on("click", function(){
+    location.reload();
+});
+
 
 // global variables
-timerCount = 90;
+timerCount = 60;
 
 unansweredCounter = 0;
 correctCounter = 0;
@@ -41,6 +44,7 @@ incorrectCounter = 0;
 var startTimer = function(){
     count = setInterval(countDown, 1000);
 }
+
 // timer count down function from 90 seconds and displays it
 function countDown(){
     timerCount--;
@@ -48,16 +52,14 @@ function countDown(){
     
     $('#done').on("click", function(){
         clearInterval(count);
-        // gameCheck();
-        // // timesUp();
-        // // // ???? not working
-        // // // $('#gameContent').hide();
-        // $('gameResults').show();
     });
 
     if(timerCount == -1){
         gameCheck();
         $('#gameContent').hide();
+        $('.space').html('<h1>TIME\'S UP!!</h1>');
+        $('#gameResults').show();
+        
     }
     
     
@@ -186,12 +188,15 @@ var gameCheck = function timesUp(){
     $('#incorrectCount').html(incorrectCounter);
     $('#unansweredCount').html(unansweredCounter);
 
-    $('gameResults').show();
+    // $('gameResults').show();
 
-    console.log(correctCounter);
-    console.log(incorrectCounter);
-    console.log(unansweredCounter);
+    // console.log(correctCounter);
+    // console.log(incorrectCounter);
+    // console.log(unansweredCounter);
 }
+
+
+
 
 
 
